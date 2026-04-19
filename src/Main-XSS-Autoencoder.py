@@ -19,7 +19,7 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Dense
 
 # 1. Carregar dados de treino
-df_treino = pd.read_csv("XSSTraining.csv")  # Substitua pelo seu arquivo
+df_treino = pd.read_csv("XSSTraining.csv")  
 X = df_treino.drop("Class", axis=1)
 y = df_treino["Class"].apply(lambda x: 1 if x == "Malicious" else 0)
 
@@ -103,7 +103,7 @@ print("\nMelhor Resultado encontrado:")
 print(melhor_resultado)
 
 # 9. Avaliação com novo dataset XSStesting
-df_xss = pd.read_csv("XSSTesting.csv")  # Substitua pelo seu arquivo
+df_xss = pd.read_csv("XSSTesting.csv")
 y_xss = df_xss["Class"].apply(lambda x: 1 if x == "Malicious" else 0)
 X_xss = df_xss.drop("Class", axis=1)
 
